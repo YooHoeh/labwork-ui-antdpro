@@ -17,7 +17,7 @@ export default [
     Routes: ['src/pages/Authorized'],
     authority: ['admin', 'user', 'guest'],
     routes: [
-      { path: '/', redirect: '/dashboard' },
+      { path: '/', redirect: '/home' },
 
       {
         name: 'Home',
