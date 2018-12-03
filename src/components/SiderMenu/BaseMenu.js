@@ -7,6 +7,7 @@ import { urlToList } from '../_utils/pathTools';
 import { getMenuMatches } from './SiderMenuUtils';
 import { isUrl } from '@/utils/utils';
 import styles from './index.less';
+import { FormattedMessage } from 'umi/locale';
 
 const { SubMenu } = Menu;
 
@@ -112,7 +113,9 @@ export default class BaseMenu extends PureComponent {
         }
       >
         {icon}
-        <span>{name}</span>
+        <span>
+          <FormattedMessage id={name} defaultMessage={name} />
+        </span>
       </Link>
     );
   };

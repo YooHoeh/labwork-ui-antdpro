@@ -18,13 +18,13 @@ export default [
     authority: ['admin', 'user', 'guest'],
     routes: [
       { path: '/', redirect: '/dashboard' },
-      {
-        path: '/dashboard',
-        name: 'dashboard',
-        icon: 'dashboard',
-        component: './Dashboard/Analysis',
-      },
 
+      {
+        name: 'Home',
+        icon: 'home',
+        path: '/home',
+        component: './Home',
+      },
       {
         name: 'People',
         icon: 'team',
