@@ -7,5 +7,7 @@ export default {
   Publications: '著作',
   'Contact Us': '联系我们',
   'navBar.lang': '语言',
-  'app.exception.description.404': '404',
+  'app.404': '您访问的网页不存在',
+  'app.exception.back': '返回首页',
+  'people.clickformore': '点击了解更多',
 };

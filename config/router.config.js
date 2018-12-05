@@ -6,8 +6,6 @@ export default [
     routes: [
       { path: '/user', redirect: '/user/login' },
       { path: '/user/login', component: './User/Login' },
-      { path: '/user/register', component: './User/Register' },
-      { path: '/user/register-result', component: './User/RegisterResult' },
     ],
   },
   // app
@@ -29,21 +27,25 @@ export default [
         name: 'People',
         icon: 'team',
         path: '/people',
+        component: '/People',
       },
       {
         name: 'Projects',
         icon: 'gold',
         path: '/projects',
+        component: '/Projects',
       },
       {
         name: 'Publications',
         icon: 'book',
         path: '/publications',
+        component: '/Publications',
       },
       {
         name: 'Contact Us',
         icon: 'message',
         path: '/contact',
+        component: '/ContactUs',
       },
       {
         component: '404',

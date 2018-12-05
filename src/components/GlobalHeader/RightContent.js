@@ -18,27 +18,7 @@ export default class GlobalHeaderRight extends PureComponent {
       onNoticeClear,
       theme,
     } = this.props;
-    const menu = (
-      <Menu className={styles.menu} selectedKeys={[]} onClick={onMenuClick}>
-        <Menu.Item key="userCenter">
-          <Icon type="user" />
-          <FormattedMessage id="menu.account.center" defaultMessage="account center" />
-        </Menu.Item>
-        <Menu.Item key="userinfo">
-          <Icon type="setting" />
-          <FormattedMessage id="menu.account.settings" defaultMessage="account settings" />
-        </Menu.Item>
-        <Menu.Item key="triggerError">
-          <Icon type="close-circle" />
-          <FormattedMessage id="menu.account.trigger" defaultMessage="Trigger Error" />
-        </Menu.Item>
-        <Menu.Divider />
-        <Menu.Item key="logout">
-          <Icon type="logout" />
-          <FormattedMessage id="menu.account.logout" defaultMessage="logout" />
-        </Menu.Item>
-      </Menu>
-    );
+
     let className = styles.right;
     if (theme === 'dark') {
       className = `${styles.right}  ${styles.dark}`;
@@ -48,11 +28,7 @@ export default class GlobalHeaderRight extends PureComponent {
         <HeaderSearch
           className={`${styles.action} ${styles.search}`}
           placeholder={formatMessage({ id: 'globalHeader.search' })}
-          dataSource={[
-            formatMessage({ id: 'component.globalHeader.search.example1' }),
-            formatMessage({ id: 'component.globalHeader.search.example2' }),
-            formatMessage({ id: 'component.globalHeader.search.example3' }),
-          ]}
+          dataSource={['这里使用ajax加载远程数据']}
           onSearch={value => {
             console.log('input', value); // eslint-disable-line
           }}

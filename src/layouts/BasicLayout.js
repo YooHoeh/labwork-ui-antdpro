@@ -18,9 +18,6 @@ import Exception403 from '../pages/Exception/403';
 import PageLoading from '@/components/PageLoading';
 import SiderMenu from '@/components/SiderMenu';
 
-// lazy load SettingDrawer
-const SettingDrawer = React.lazy(() => import('@/components/SettingDrawer'));
-
 const { Content } = Layout;
 
 const query = {
@@ -224,7 +221,6 @@ class BasicLayout extends React.PureComponent {
             )}
           </ContainerQuery>
         </DocumentTitle>
-        <Suspense fallback={<PageLoading />}>{this.renderSettingDrawer()}</Suspense>
       </React.Fragment>
     );
   }
