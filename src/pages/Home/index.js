@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import {} from 'antd';
+import { Card } from 'antd';
 import { connect } from 'dva';
 import styles from './index.less';
 import MyCarousel from '../../components/Carousel';
@@ -9,7 +9,11 @@ import MyCarousel from '../../components/Carousel';
 }))
 class Home extends PureComponent {
   render() {
-    return <MyCarousel />;
+    return (
+      <Card>
+        <MyCarousel />
+      </Card>
+    );
   }
 }
 

@@ -1,31 +1,33 @@
 .carousel {
   height: 600px;
-  line-height: 160px;
   background: pink;
   overflow: hidden;
   .item {
     width: inherit;
     height: 600px;
-    h1 {
-      font-size: 3em;
-      font-weight: bold;
-      z-index: 2;
-      position: relative;
-      bottom: 0;
-    }
     .desc {
       background-color: #00000077;
       opacity: 0.8;
       position: absolute;
       bottom: 0;
       width: 100%;
-      z-index: 2;
-      font-size: 1.9em;
       color: aliceblue;
       padding: 8px;
+      p {
+        color: aliceblue;
+        font-size: 1.9em;
+        font-weight: bold;
+        position: relative;
+        margin: 5px 8px;
+      }
+      span {
+        font-size: 1.5em;
+        bottom: 20px;
+        overflow: wrap;
+      }
     }
     img {
-      position: absolute;
+      position: relative;
       top: 0;
       left: 0;
       width: 100%;

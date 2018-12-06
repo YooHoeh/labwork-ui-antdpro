@@ -1,5 +1,5 @@
 import React from 'react';
-import { Carousel } from 'antd';
+import { Carousel, Card, Col, Row } from 'antd';
 import styles from './index.less';
 const data = [
   {
@@ -7,21 +7,20 @@ const data = [
     img:
       'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=131288021,2325464851&fm=26&gp=0.jpg',
     desc:
-      'Come help us make collaboration even better. We’ve built a company we truly love working for, and we think you will too.',
+      'No.1No.1No.1No.1No.1No.1No.1No.1No.1No.1No.1No.1No.1No.1No.1No.1No.1No.1No.1No.1No.1No.1',
   },
   {
     title: 'Work happier',
     img:
       'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=131288021,2325464851&fm=26&gp=0.jpg',
     desc:
-      'Build amazing things with autonomy, self-direction, and a healthy work-life balance. We offer flexible work schedules for all of our employees and unlimited PTO. We also believe that if a job allows for it, you should work wherever you’re happiest.',
+      'No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2',
   },
   {
     title: 'Put your health and family first',
     img:
       'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=131288021,2325464851&fm=26&gp=0.jpg',
-    desc:
-      'You’ll enjoy 100% coverage of health insurance premiums across our medical, dental, and vision plan offerings, including coverage for dependents. We also offer five months of paid family leave to all new parents with the option to use it all at once or throughout the baby’s first year.',
+    desc: 'No.3No.3No.3No.3No.3No.3No.3No.3No.3',
   },
 ];
 export default class MyCarousel extends React.Component {
@@ -29,9 +28,9 @@ export default class MyCarousel extends React.Component {
     return data.map(item => {
       return (
         <div className={styles.item}>
-          <h3>{item.title}</h3>
           <img src={item.img} />
           <div className={styles.desc}>
+            <p>{item.title}</p>
             <span>{item.desc}</span>
           </div>
         </div>
@@ -40,9 +39,16 @@ export default class MyCarousel extends React.Component {
   }
   render() {
     return (
-      <Carousel autoplay className={styles.carousel}>
-        {this.renderItem(data)}
-      </Carousel>
+      <Row gutter={16}>
+        <Col span={16}>
+          <Carousel autoplay className={styles.carousel}>
+            {this.renderItem(data)}
+          </Carousel>
+        </Col>
+        <Col span={8}>
+          <p>sdf</p>
+        </Col>
+      </Row>
     );
   }
 }

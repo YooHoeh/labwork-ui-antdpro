@@ -1,10 +1,12 @@
 import React, { Fragment } from 'react';
 import { Layout, Icon } from 'antd';
 import GlobalFooter from '@/components/GlobalFooter';
+import TitleBar from '../components/TitleBar';
 
 const { Footer } = Layout;
 const FooterView = () => (
-  <Footer style={{ padding: 0 }}>
+  <Footer style={{ padding: 0, marginTop: 24 }}>
+    <TitleBar />
     <GlobalFooter
       links={[
         {
