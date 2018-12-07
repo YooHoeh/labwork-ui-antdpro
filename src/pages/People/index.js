@@ -1,7 +1,8 @@
 import React from 'react';
 import PeopleCard from '../../components/PeopleCard';
 import { FormattedMessage } from 'umi/locale';
-import { Collapse } from 'antd';
+import { Collapse, Card } from 'antd';
+import { formatMessage } from 'umi/locale';
 const { Panel } = Collapse;
 
 const customPanelStyle = {
@@ -74,23 +75,20 @@ export default class People extends React.Component {
   renderType(type, typeName) {
     return (
       <Panel header={typeName} style={{ padding: 15 }}>
-        {type.map(item => {
+        {type.map((item, index) => {
           // return <p>jkl</p>;
-          return <PeopleCard {...item} />;
+          return <PeopleCard {...item} key={index} />;
         })}
       </Panel>
     );
   }
   render() {
     return (
-      <div>
-        <h2>
-          <FormattedMessage id="People" defaultMessage="People" />
-        </h2>
-        <Collapse bordered={false} defaultActiveKey={['1']}>
+      <Card title={formatMessage({ id: 'People', defaultMessage: 'People' })}>
+        <Collapse bordered={false} defaultActiveKey={'0'}>
           {this.renderPanel(people)}
         </Collapse>
-      </div>
+      </Card>
     );
   }
 }

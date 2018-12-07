@@ -1,5 +1,5 @@
 import React from 'react';
-import { Carousel, Card, Col, Row } from 'antd';
+import { Carousel } from 'antd';
 import styles from './index.less';
 const data = [
   {
@@ -39,16 +39,9 @@ export default class MyCarousel extends React.Component {
   }
   render() {
     return (
-      <Row gutter={16}>
-        <Col span={16}>
-          <Carousel autoplay className={styles.carousel}>
-            {this.renderItem(data)}
-          </Carousel>
-        </Col>
-        <Col span={8}>
-          <p>sdf</p>
-        </Col>
-      </Row>
+      <Carousel autoplay className={styles.carousel}>
+        {this.renderItem(data)}
+      </Carousel>
     );
   }
 }

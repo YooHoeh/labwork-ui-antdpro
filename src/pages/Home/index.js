@@ -1,8 +1,10 @@
 import React, { PureComponent } from 'react';
-import { Card } from 'antd';
+import { Card, Col, Row } from 'antd';
 import { connect } from 'dva';
+import { formatMessage } from 'umi/locale';
 import styles from './index.less';
 import MyCarousel from '../../components/Carousel';
+import MyList from '../../components/Mylist';
 
 @connect(({ list }) => ({
   list,
@@ -10,9 +12,15 @@ import MyCarousel from '../../components/Carousel';
 class Home extends PureComponent {
   render() {
     return (
-      <Card>
+      <div>
         <MyCarousel />
-      </Card>
+        <Card
+          title={formatMessage({ id: 'home.news', defaultMessage: 'News' })}
+          style={{ top: 18, bottom: 18 }}
+        >
+          <MyList />
+        </Card>
+      </div>
     );
   }
 }
