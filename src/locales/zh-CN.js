@@ -15,5 +15,7 @@ export default {
   'people.clickformore': '点击了解更多',
   'people.Doctor': '博士',
   'people.Students': '学生',
-  'people.Academic Staff': '学术员工',
+  'people.Academic Staff': '学术人员',
+  "contact.address": " 地址:河南省开封市龙亭区金明大道河南大学金明校区计算机与信息工程学院",
+  "contact.zipCode": "邮政编码: 475004"
 };

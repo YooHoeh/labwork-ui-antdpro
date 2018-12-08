@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Icon } from 'antd';
-import { formatMessage } from 'umi/locale';
+import { formatMessage, FormattedMessage } from 'umi/locale';
 import './index.less';
 
 export default class ContactUs extends React.Component {
@@ -8,15 +8,16 @@ export default class ContactUs extends React.Component {
     return (
       <Card title={formatMessage({ id: 'Contact Us' })}>
         <div className="main">
-          <h3>人工智能技术及应用研究组</h3>
+          <h3><FormattedMessage id="title.name" /></h3>
           <p>
             <Icon type="environment" style={{ marginRight: 8 }} />
-            地址:河南省开封市龙亭区金明大道河南大学金明校区计算机与信息工程学院
+            <FormattedMessage id="contact.address" />
           </p>
           <p>
             <Icon type="mail" style={{ marginRight: 8 }} />
-            邮编:475004
+            <FormattedMessage id="contact.zipCode" />
           </p>
+          <p><Icon type="message" style={{ marginRight: 8 }} /><a href="xxxxxxx@xxx.com" >xxxxxxx@xxx.com</a></p>
           <p>Artificial Intelligence Research and Application Group</p>
         </div>
       </Card>

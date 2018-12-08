@@ -1,6 +1,6 @@
 import mockjs from 'mockjs';
 
-const titles = [
+const s = [
   'Alipay',
   'Angular',
   'Ant Design',

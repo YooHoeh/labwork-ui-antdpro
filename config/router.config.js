@@ -24,12 +24,6 @@ export default [
         component: './Home',
       },
       {
-        name: 'People',
-        icon: 'team',
-        path: '/people',
-        component: '/People',
-      },
-      {
         name: 'Projects',
         icon: 'gold',
         path: '/projects',
@@ -40,6 +34,12 @@ export default [
         icon: 'book',
         path: '/publications',
         component: '/Publications',
+      },
+      {
+        name: 'People',
+        icon: 'team',
+        path: '/people',
+        component: '/People',
       },
       {
         name: 'Contact Us',

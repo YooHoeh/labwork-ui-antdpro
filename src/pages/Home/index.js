@@ -4,7 +4,7 @@ import { connect } from 'dva';
 import { formatMessage } from 'umi/locale';
 import styles from './index.less';
 import MyCarousel from '../../components/Carousel';
-import MyList from '../../components/Mylist';
+import MyList from '../../components/MyList';
 
 @connect(({ list }) => ({
   list,
@@ -17,7 +17,10 @@ class Home extends PureComponent {
           <MyCarousel />
         </Col>
         <Col md={10} sm={24}>
-          <Card title={formatMessage({ id: 'home.news', defaultMessage: 'News' })}>
+          <Card
+            title={formatMessage({ id: 'home.news', defaultMessage: 'News' })}
+            style={{ maxHeight: 600 }}
+          >
             <MyList />
           </Card>
         </Col>

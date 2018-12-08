@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { FormattedMessage, formatMessage } from 'umi/locale';
 import { Spin, Tag, Menu, Icon, Dropdown, Avatar, Tooltip } from 'antd';
+import Link from 'umi/link';
 import moment from 'moment';
 import groupBy from 'lodash/groupBy';
 import NoticeIcon from '../NoticeIcon';
@@ -25,6 +26,9 @@ export default class GlobalHeaderRight extends PureComponent {
     }
     return (
       <div className={className}>
+        <Link to="/user/login">
+          <Icon type="lock" style={{ color: '#fff', marginRight: 14 }} />
+        </Link>
         <HeaderSearch
           className={`${styles.action} ${styles.search}`}
           placeholder={formatMessage({ id: 'globalHeader.search' })}

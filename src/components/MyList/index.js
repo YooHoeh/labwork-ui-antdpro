@@ -5,10 +5,9 @@ const listData = [];
 for (let i = 0; i < 5; i++) {
   listData.push({
     href: 'http://ant.design',
-    title: `ant design part ${i}`,
+    title: `标题 ${i}`,
     avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
-    description:
-      'Ant Design, a design language for background applications, is refined by Ant UED Team.',
+
     content:
       'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
   });
@@ -18,8 +17,8 @@ class MyList extends Component {
   render() {
     return (
       <List
+        style={{ maxHeight: 600 }}
         itemLayout="vertical"
-        size="small"
         pagination={{
           onChange: page => {
             console.log(page);
@@ -40,7 +39,6 @@ class MyList extends Component {
           >
             <List.Item.Meta
               title={<a href={item.href}>{item.title}</a>}
-              description={item.description}
             />
             {item.content}
           </List.Item>
