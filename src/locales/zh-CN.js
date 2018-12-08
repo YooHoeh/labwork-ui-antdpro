@@ -7,15 +7,16 @@ export default {
   Publications: '著作',
   'Contact Us': '联系我们',
 
-  'titleBar.desc': '专注于人工智能研究和中国应用的前沿创新',
+  'titleBar.desc': '专注于人工智能研究和应用的中国前沿创新研究机构',
   'home.news': '最新动态',
   'navBar.lang': '语言',
   'app.404': '您访问的网页不存在',
   'app.exception.back': '返回首页',
+  'app.login': '进入管理',
   'people.clickformore': '点击了解更多',
   'people.Doctor': '博士',
   'people.Students': '学生',
   'people.Academic Staff': '学术人员',
-  "contact.address": " 地址:河南省开封市龙亭区金明大道河南大学金明校区计算机与信息工程学院",
-  "contact.zipCode": "邮政编码: 475004"
+  'contact.address': ' 地址:河南省开封市龙亭区金明大道河南大学金明校区计算机与信息工程学院',
+  'contact.zipCode': '邮政编码: 475004',
 };

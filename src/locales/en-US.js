@@ -12,10 +12,12 @@ export default {
   'home.news': 'News',
   'app.404': 'The page you visited does not exist',
   'app.exception.back': 'Go Home',
+  'app.login': 'Login',
   'people.clickformore': 'Click for More Information',
   'people.Doctor': 'Doctor',
   'people.Students': 'Students',
   'people.Academic Staff': 'Academic Staff',
-  'contact.address': 'Address: School of Computer and Information Engineering, Jinming Campus, Henan University, Jinming Avenue, Longting District, Kaifeng City, Henan Province',
-  "contact.zipCode": "Zip code: 475004"
+  'contact.address':
+    'Address: School of Computer and Information Engineering, Jinming Campus, Henan University, Jinming Avenue, Longting District, Kaifeng City, Henan Province',
+  'contact.zipCode': 'Zip code: 475004',
 };

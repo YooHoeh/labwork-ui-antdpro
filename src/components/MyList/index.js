@@ -37,9 +37,7 @@ class MyList extends Component {
               />
             }
           >
-            <List.Item.Meta
-              title={<a href={item.href}>{item.title}</a>}
-            />
+            <List.Item.Meta title={<a href={item.href}>{item.title}</a>} />
             {item.content}
           </List.Item>
         )}
