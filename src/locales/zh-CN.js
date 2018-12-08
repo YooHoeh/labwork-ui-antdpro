@@ -13,4 +13,7 @@ export default {
   'app.404': '您访问的网页不存在',
   'app.exception.back': '返回首页',
   'people.clickformore': '点击了解更多',
+  'people.Doctor': '博士',
+  'people.Students': '学生',
+  'people.Academic Staff': '学术员工',
 };

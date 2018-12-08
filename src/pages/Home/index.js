@@ -12,15 +12,16 @@ import MyList from '../../components/Mylist';
 class Home extends PureComponent {
   render() {
     return (
-      <div>
-        <MyCarousel />
-        <Card
-          title={formatMessage({ id: 'home.news', defaultMessage: 'News' })}
-          style={{ top: 18, bottom: 18 }}
-        >
-          <MyList />
-        </Card>
-      </div>
+      <Row gutter={18}>
+        <Col md={14} sm={24}>
+          <MyCarousel />
+        </Col>
+        <Col md={10} sm={24}>
+          <Card title={formatMessage({ id: 'home.news', defaultMessage: 'News' })}>
+            <MyList />
+          </Card>
+        </Col>
+      </Row>
     );
   }
 }

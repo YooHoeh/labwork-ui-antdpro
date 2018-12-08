@@ -13,4 +13,7 @@ export default {
   'app.404': 'The page you visited does not exist',
   'app.exception.back': 'Go Home',
   'people.clickformore': 'Click for More Information',
+  'people.Doctor': 'Doctor',
+  'people.Students': 'Students',
+  'people.Academic Staff': 'Academic Staff',
 };
