@@ -5,6 +5,7 @@ import { Icon } from 'antd';
 import GlobalFooter from '@/components/GlobalFooter';
 import SelectLang from '@/components/SelectLang';
 import styles from './UserLayout.less';
+import TitleBar from '../components/TitleBar';
 import logo from '../assets/logo.svg';
 
 const links = [
@@ -43,6 +44,7 @@ class UserLayout extends React.PureComponent {
     return (
       // @TODO <DocumentTitle title={this.getPageTitle()}>
       <div className={styles.container}>
+        <TitleBar />
         <div className={styles.lang}>
           <SelectLang />
         </div>

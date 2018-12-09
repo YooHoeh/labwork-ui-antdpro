@@ -22,23 +22,6 @@ class LoginPage extends Component {
     this.setState({ type });
   };
 
-  onGetCaptcha = () =>
-    new Promise((resolve, reject) => {
-      this.loginForm.validateFields(['mobile'], {}, (err, values) => {
-        if (err) {
-          reject(err);
-        } else {
-          const { dispatch } = this.props;
-          dispatch({
-            type: 'login/getCaptcha',
-            payload: values.mobile,
-          })
-            .then(resolve)
-            .catch(reject);
-        }
-      });
-    });
-
   handleSubmit = (err, values) => {
     const { type } = this.state;
     if (!err) {
@@ -76,22 +59,18 @@ class LoginPage extends Component {
             this.loginForm = form;
           }}
         >
-          <Tab key="account" tab={formatMessage({ id: 'app.login.tab-login-credentials' })}>
-            {login.status === 'error' &&
-              login.type === 'account' &&
-              !submitting &&
-              this.renderMessage(formatMessage({ id: 'app.login.message-invalid-credentials' }))}
-            <UserName name="userName" placeholder="username: admin or user" />
+          <div>
+            <UserName name="userName" placeholder={formatMessage({ id: 'login.usernameholder' })} />
             <Password
               name="password"
-              placeholder="password: ant.design"
+              placeholder={formatMessage({ id: 'login.pskholder' })}
               onPressEnter={() => this.loginForm.validateFields(this.handleSubmit)}
             />
-          </Tab>
+          </div>
 
           <div>
             <Checkbox checked={autoLogin} onChange={this.changeAutoLogin}>
-              <FormattedMessage id="app.login.remember-me" />
+              <FormattedMessage id="login.remember-me" />
             </Checkbox>
           </div>
           <Submit loading={submitting}>
