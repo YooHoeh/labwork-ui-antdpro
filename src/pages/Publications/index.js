@@ -74,22 +74,24 @@ export default class Publications extends React.Component {
     return (
       <Card
         title={
-          <b>
+          <b >
             <Icon type="book" theme="filled" style={{ marginRight: 8 }} />
             {item.title}
           </b>
         }
+        titleStyle={{ height: 15 }}
         extra={renderIcon(item.type)}
-        style={{ minHeight: 120 }}
+        style={{ minHeight: 50 }}
+        bodyStyle={{ maxHeight: 100, padding: 8 }}
       >
-        <Row gutter={12}>
+        <Row gutter={5}>
           <Icon type="book" style={{ marginRight: 8 }} />
           <i>{item.book}</i>
         </Row>
-        <Row gutter={12}>
+        <Row gutter={5}>
           <Icon type="team" style={{ marginRight: 8 }} /> {item.author}
         </Row>
-        <Row gutter={12}>
+        <Row gutter={5}>
           <Icon type="calendar" style={{ marginRight: 8 }} />
           {item.time}
         </Row>
