@@ -1,9 +1,10 @@
 import { routerRedux } from 'dva/router';
 import { stringify } from 'qs';
-import { fakeAccountLogin, getFakeCaptcha } from '@/services/api';
+import { fakeAccountLogin, getFakeCaptcha, AccountLogin } from '@/services/api';
 import { setAuthority } from '@/utils/authority';
 import { getPageQuery } from '@/utils/utils';
 import { reloadAuthorized } from '@/utils/Authorized';
+import { message } from 'antd';
 
 export default {
   namespace: 'login',
@@ -20,11 +21,14 @@ export default {
         payload: response,
       });
       // Login successfully
+      message.info(response.state);
+      // message.info(JSON.stringify(response));
       if (response.status === 'ok') {
         reloadAuthorized();
         const urlParams = new URL(window.location.href);
         const params = getPageQuery();
         let { redirect } = params;
+        console.log(redirect);
         if (redirect) {
           const redirectUrlParams = new URL(redirect);
           if (redirectUrlParams.origin === urlParams.origin) {
@@ -37,7 +41,7 @@ export default {
             return;
           }
         }
-        yield put(routerRedux.replace(redirect || '/'));
+        yield put(routerRedux.replace(redirect || '/admin'));
       }
     },
 

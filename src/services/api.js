@@ -109,6 +109,12 @@ export async function fakeAccountLogin(params) {
     body: params,
   });
 }
+export async function AccountLogin(params) {
+  return request('http://172.20.151.89:8080/login', {
+    method: 'POST',
+    body: params,
+  });
+}
 
 export async function fakeRegister(params) {
   return request('/api/register', {

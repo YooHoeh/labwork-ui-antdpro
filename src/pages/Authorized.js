@@ -7,7 +7,7 @@ const Authority = getAuthority();
 const Authorized = RenderAuthorized(Authority);
 
 export default ({ children }) => (
-  <Authorized authority={children.props.route.authority} noMatch={<Redirect to="/home" />}>
+  <Authorized authority={children.props.route.authority} noMatch={<Redirect to="/admin" />}>
     {children}
   </Authorized>
 );
