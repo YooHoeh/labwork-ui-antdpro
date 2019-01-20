@@ -17,9 +17,12 @@ export default {
   'people.Doctor': 'Doctor',
   'people.Students': 'Students',
   'people.Academic Staff': 'Academic Staff',
+  'contact.config': 'Contact Config',
+  'contact.email': 'E-Mail',
   'contact.address':
     'Address: School of Computer and Information Engineering, Jinming Campus, Henan University, Jinming Avenue, Longting District, Kaifeng City, Henan Province',
   'contact.zipCode': 'Zip code: 475004',
+  'contact.phone': 'Phone Number',
   'login.usernameholder': 'Please type Admin Username',
   'login.pskholder': 'Password',
   'login.remember-me': 'Remember Me',

@@ -18,19 +18,21 @@ const publicationsList = [
     time: ' June 2015',
   },
   {
-    title: 'Cascaded Hand Pose Regression',
+    title:
+      'Cascaded Hand Pose RegressionPose RegressionPose RegressionPose RegressionPose Regression',
     type: { pdf: 'http://github.com/yoohoeh' },
     author: 'Xiao Sun, Yichen Wei, Shuang Liang, Xiaoou Tang, Jian Sun',
     book: 'IEEE Conf. on Computer Vision and Pattern Recognition',
     time: ' June 2015',
   },
   {
-    title: 'Cascaded Hand Pose Regression',
+    title: 'Cascaded Hand Pose RegressionIEEE Conf. on Computer Vision and Pattern Recognition',
     type: {
       web: 'http://github.com/yoohoeh',
       pdf: 'http://github.com/yoohoeh',
     },
-    author: 'Xiao Sun, Yichen Wei, Shuang Liang, Xiaoou Tang, Jian Sun',
+    author:
+      'Xiao Sun,Xiao Sun,Xiao Sun,Xiao Sun,Xiao Sun,Xiao Sun, Yichen Wei, Shuang Liang, Xiaoou Tang, Jian Sun',
     book: 'IEEE Conf. on Computer Vision and Pattern Recognition',
     time: ' June 2015',
   },
@@ -74,7 +76,7 @@ export default class Publications extends React.Component {
     return (
       <Card
         title={
-          <b >
+          <b>
             <Icon type="book" theme="filled" style={{ marginRight: 8 }} />
             {item.title}
           </b>

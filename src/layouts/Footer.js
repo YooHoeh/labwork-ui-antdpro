@@ -12,13 +12,19 @@ const FooterView = () => (
         {
           key: '首页',
           title: '首页',
-          href: '#',
+          href: '/',
           blankTarget: true,
         },
         {
           key: 'HENU',
           title: ' HENU',
           href: 'https://www.henu.edu.cn',
+          blankTarget: true,
+        },
+        {
+          key: 'Doc',
+          title: 'Doc',
+          href: 'api',
           blankTarget: true,
         },
       ]}

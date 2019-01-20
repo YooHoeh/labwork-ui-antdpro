@@ -84,7 +84,7 @@ export default class People extends React.Component {
   render() {
     return (
       <Card title={formatMessage({ id: 'People', defaultMessage: 'People' })}>
-        <Collapse bordered={false} defaultActiveKey={'0'}>
+        <Collapse bordered={false} defaultActiveKey={['0', '1', '2']}>
           {this.renderPanel(people)}
         </Collapse>
       </Card>

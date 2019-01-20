@@ -1,20 +1,9 @@
 import React, { Component } from 'react';
 import { List, Avatar, Icon } from 'antd';
 
-const listData = [];
-for (let i = 0; i < 5; i++) {
-  listData.push({
-    href: 'http://github.com/yoohoeh',
-    title: `标题 ${i}`,
-    avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
-
-    content:
-      'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
-  });
-}
-
 class MyList extends Component {
   render() {
+    const { data } = this.props;
     return (
       <List
         style={{ maxHeight: 600 }}
@@ -25,7 +14,7 @@ class MyList extends Component {
           },
           pageSize: 2,
         }}
-        dataSource={listData}
+        dataSource={data}
         renderItem={item => (
           <List.Item
             key={item.title}

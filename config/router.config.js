@@ -1,4 +1,5 @@
 export default [
+  { path: '/api', component: '../pages/apiDoc' },
   // user
   {
     path: '/user',
@@ -15,7 +16,7 @@ export default [
     authority: ['admin'],
     component: '../layouts/Backend',
     routes: [
-      { path: '/', redirect: 'admin/home' },
+      { path: '/admin', redirect: 'home' },
       {
         name: 'Home Setting',
         icon: 'home',
@@ -36,13 +37,13 @@ export default [
       },
 
       {
-        name: 'People Info',
+        name: 'People Manager',
         icon: 'team',
         path: '/admin/people',
         component: './Admin/people',
       },
       {
-        name: 'Contact Us Info',
+        name: 'Contact Info Manager',
         icon: 'message',
         path: '/admin/contact',
         component: './Admin/contactUs',

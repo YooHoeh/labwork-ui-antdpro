@@ -36,6 +36,7 @@ export default class GlobalHeader extends PureComponent {
           type={collapsed ? 'menu-unfold' : 'menu-fold'}
           onClick={this.toggle}
         />
+        <b style={{ margin: '0 auto', display: 'inline' }}>ssss</b>
         <RightContent {...this.props} />
       </div>
     );

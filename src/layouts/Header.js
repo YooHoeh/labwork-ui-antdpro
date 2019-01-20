@@ -116,6 +116,8 @@ class HeaderView extends PureComponent {
   };
 
   render() {
+    console.log(this.props.menuData.lenght);
+    console.log(this.props.menuData);
     const { isMobile, handleMenuCollapse, setting } = this.props;
     const { navTheme, layout, fixedHeader } = setting;
     const { visible } = this.state;
@@ -123,7 +125,7 @@ class HeaderView extends PureComponent {
     const width = this.getHeadWidth();
     const HeaderDom = visible ? (
       <Header style={{ padding: 0, width }} className={fixedHeader ? styles.fixedHeader : ''}>
-        {isTop && !isMobile ? (
+        {isTop && !isMobile && !this.props.isAdmin ? (
           <TopNavHeader
             theme={navTheme}
             mode="horizontal"

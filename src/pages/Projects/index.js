@@ -1,129 +1,74 @@
 import React from 'react';
-export default class Help extends React.Component {
-  render() {
-    const content = `
-  <pre style="font-size:14px">
-  新闻=[{
-    href: 'http://github.com/yoohoeh',
-    title: title1
-    avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+import { List, Avatar, Icon, Card, Tabs, Select } from 'antd';
+import { formatMessage } from 'umi/locale';
 
+const TabPane = Tabs.TabPane;
+const Option = Select.Option;
+const listData = [];
+for (let i = 0; i < 23; i++) {
+  listData.push({
+    href: 'http://ant.design',
+    title: `ant design part ${i}`,
+    description:
+      'Ant Design, a design language for background applications, is refined by Ant UED Team.',
     content:
-      'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
-  }],
-  轮播= [
-    {
-      title: 'A diverse and inclusive workplace',
-      img:
-        'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=131288021,2325464851&fm=26&gp=0.jpg',
-      desc:
-        'No.1No.1No.1No.1No.1No.1No.1No.1No.1No.1No.1No.1No.1No.1No.1No.1No.1No.1No.1No.1No.1No.1',
-    },
-    {
-      title: 'Work happier',
-      img:
-        'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=131288021,2325464851&fm=26&gp=0.jpg',
-      desc:
-        'No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2No.2',
-    },
-    {
-      title: 'Put your health and family first',
-      img:
-        'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=131288021,2325464851&fm=26&gp=0.jpg',
-      desc: 'No.3No.3No.3No.3No.3No.3No.3No.3No.3',
-    },
-  ];
-  著作：[
-    {
-      title: 'Cascaded Hand Pose Regression',
-      type: { pdf: 'http://github.com/yoohoeh' },
-      author: 'Xiao Sun, Yichen Wei, Shuang Liang, Xiaoou Tang, Jian Sun',
-      book: 'IEEE Conf. on Computer Vision and Pattern Recognition',
-      time: ' June 2015',
-    },
-    {
-      title: 'Cascaded Hand Pose Regression',
-      type: { web: 'http://github.com/yoohoeh' },
-      author: 'Xiao Sun, Yichen Wei, Shuang Liang, Xiaoou Tang, Jian Sun',
-      book: 'IEEE Conf. on Computer Vision and Pattern Recognition',
-      time: ' June 2015',
-    },
-    {
-      title: 'Cascaded Hand Pose Regression',
-      type: { pdf: 'http://github.com/yoohoeh' },
-      author: 'Xiao Sun, Yichen Wei, Shuang Liang, Xiaoou Tang, Jian Sun',
-      book: 'IEEE Conf. on Computer Vision and Pattern Recognition',
-      time: ' June 2015',
-    },
-    {
-      title: 'Cascaded Hand Pose Regression',
-      type: {
-        web: 'http://github.com/yoohoeh',
-        pdf: 'http://github.com/yoohoeh',
-      },
-      author: 'Xiao Sun, Yichen Wei, Shuang Liang, Xiaoou Tang, Jian Sun',
-      book: 'IEEE Conf. on Computer Vision and Pattern Recognition',
-      time: ' June 2015',
-    },
-    {
-      title: 'Cascaded Hand Pose Regression',
-      type: { pdf: 'http://github.com/yoohoeh' },
-      author: 'Xiao Sun, Yichen Wei, Shuang Liang, Xiaoou Tang, Jian Sun',
-      book: 'IEEE Conf. on Computer Vision and Pattern Recognition',
-      time: ' June 2015',
-    },
-  ]
-  人员={
-    Doctor: [
-      {
-        img: 'http://mmlab.ie.cuhk.edu.hk/images/people/director/xtang.jpg',
-        name: 'Xiaoou Sean TANG 1',
-        desc: 'Professor ',
-        url: 'http://www.github.com/YooHoeh',
-      },
-      {
-        img: 'http://mmlab.ie.cuhk.edu.hk/images/people/director/xtang.jpg',
-        name: 'Xiaoou Sean TANG2 ',
-        desc: 'Professor ',
-        url: 'http://www.github.com/YooHoeh',
-      },
-    ],
-    Students: [
-      {
-        img: 'http://mmlab.ie.cuhk.edu.hk/images/people/director/xtang.jpg',
-        name: 'Xiaoou Sean TANG 1',
-        desc: 'Professor ',
-        url: 'http://www.github.com/YooHoeh',
-      },
-      {
-        img: 'http://mmlab.ie.cuhk.edu.hk/images/people/director/xtang.jpg',
-        name: 'Xiaoou Sean TANG2 ',
-        desc: 'Professor ',
-        url: 'http://www.github.com/YooHoeh',
-      },
-    ],
-    'Academic Staff': [
-      {
-        img: 'http://mmlab.ie.cuhk.edu.hk/images/people/director/xtang.jpg',
-        name: 'Xiaoou Sean TANG 1',
-        desc: 'Professor ',
-        url: 'http://www.github.com/YooHoeh',
-      },
-      {
-        img: 'http://mmlab.ie.cuhk.edu.hk/images/people/director/xtang.jpg',
-        name: 'Xiaoou Sean TANG 1',
-        desc: 'Professor ',
-        url: 'http://www.github.com/YooHoeh',
-      },
-      {
-        img: 'http://mmlab.ie.cuhk.edu.hk/images/people/director/xtang.jpg',
-        name: 'Xiaoou Sean TANG2 ',
-        desc: 'Professor ',
-        url: 'http://www.github.com/YooHoeh',
-      },
-    ],
-  };
-      </pre>`;
-    return <div dangerouslySetInnerHTML={{ __html: content }} />;
+      'We supply a series of design principles, practical patterns and high quality n principles, practical patterns and high quality n principles, practical patterns and high quality n principles, practical patterns and high quality n principles, practical patterns and high quality n principles, practical patterns and high quality n principles, practical patterns and high quality n principles, practical patterns and high quality n principles, practical patterns and high quality n principles, practical patterns and high quality n principles, practical patterns and high quality n principles, practical patterns and high quality n principles, practical patterns and high quality n principles, practical patterns and high quality n principles, practical patterns and high quality n principles, practical patterns and high quality n principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
+  });
+}
+
+const IconText = ({ type, text }) => (
+  <span>
+    <Icon type={type} style={{ marginRight: 8 }} />
+    {text}
+  </span>
+);
+
+export default class Project extends React.Component {
+  render() {
+    return (
+      <Card title={formatMessage({ id: 'Projects' })}>
+        <Tabs tabPosition="left">
+          <TabPane tab="人工智能" key="1">
+            <List
+              itemLayout="vertical"
+              size="small"
+              pagination={{
+                onChange: page => {
+                  console.log(page);
+                },
+                pageSize: 5,
+              }}
+              dataSource={listData}
+              renderItem={item => (
+                <Card style={{ margin: 5 }}>
+                  <List.Item
+                    key={item.title}
+                    extra={
+                      <img
+                        width={272}
+                        alt="logo"
+                        src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png"
+                      />
+                    }
+                  >
+                    <List.Item.Meta
+                      title={<a href={item.href}>{item.title}</a>}
+                      description={item.description}
+                    />
+                    {item.content}
+                  </List.Item>
+                </Card>
+              )}
+            />
+          </TabPane>
+          <TabPane tab="应用开发" key="2">
+            Content of Tab 2
+          </TabPane>
+          <TabPane tab="其他类别" key="3">
+            Content of Tab 3
+          </TabPane>
+        </Tabs>
+      </Card>
+    );
   }
 }
